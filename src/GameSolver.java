@@ -27,7 +27,7 @@ public class GameSolver {
         NumberGame game = new GunGame(100);
         int num = play(game);
         System.out.println("Correct Number is "+num);
-        System.out.println(game.getCount());
+
 
     }
 
