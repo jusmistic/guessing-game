@@ -4,16 +4,16 @@ public class GameSolver {
         int upperBound = game.getUpperBound();
         int lowerBound = 1;
         Random rand = new Random();
-        int value = rand.nextInt(upperBound)+lowerBound;
+        int value = upperBound/2;
         while(true){
             boolean check = game.guess(value);
             if(check){
                 break;
             }
-            if(game.getMessage().equals("too small")){
+            if(game.getMessage().equals("Too small")){
                 lowerBound = value;
             }
-            if(game.getMessage().equals("too large")){
+            if(game.getMessage().equals("Too large")){
                 upperBound = value;
             }
             value = rand.nextInt(upperBound)+lowerBound;
@@ -27,6 +27,7 @@ public class GameSolver {
         NumberGame game = new GunGame(100);
         int num = play(game);
         System.out.println("Correct Number is "+num);
+        System.out.println(game.getCount());
 
     }
 

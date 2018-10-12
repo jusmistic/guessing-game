@@ -8,7 +8,7 @@ public class GunGame extends NumberGame {
     public GunGame(int upperBound){
         this.upperBound = upperBound;
         Random rand = new Random();
-        this.secret = rand.nextInt(50)+1;
+        this.secret = rand.nextInt(upperBound)+1;
         super.setMessage("I'm thinking of a number between 1 and " + Integer.toString(upperBound,10));
 //        System.out.println(secret);
 
@@ -24,7 +24,7 @@ public class GunGame extends NumberGame {
     }
     @Override
     public boolean guess(int number){
-    count++;
+        count++;
 
         if (number == secret) {
             super.setMessage("Correct!");

@@ -1,7 +1,7 @@
 import javax.swing.JOptionPane;
 public class GameDialog {
     public static void main(String[] args) {
-        NumberGame game = new GunGame(100);
+        NumberGame game = new FocusGame(100);
         while(true) {
             String title = "Guessing Number";
             String message = "Input your guessing number from 1-" + game.getUpperBound();
@@ -14,7 +14,7 @@ public class GameDialog {
                 if(check){
                     type = JOptionPane.INFORMATION_MESSAGE;
                     message = game.getMessage();
-                    message += " YOu count " + game.getCount()+ " Times";
+                    message += " You count " + game.getCount()+ " Times";
                     title = "Answer";
                     JOptionPane.showMessageDialog(null, message, title, type);
                     type = JOptionPane.YES_NO_OPTION;
@@ -22,6 +22,7 @@ public class GameDialog {
                     title = "Answer";
                     int opt  = JOptionPane.showConfirmDialog(null, message, title, type);
                     if(opt == JOptionPane.YES_OPTION){
+                        game = new FocusGame(100);
                         continue;
 
                     } else {
