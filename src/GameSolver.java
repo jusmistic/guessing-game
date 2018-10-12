@@ -10,7 +10,7 @@ public class GameSolver {
             if(check){
                 break;
             }
-            if(game.getMessage().equals("too Small")){
+            if(game.getMessage().equals("too small")){
                 lowerBound = value;
             }
             if(game.getMessage().equals("too large")){
@@ -24,7 +24,7 @@ public class GameSolver {
 
 
     public static void main(String[] args) {
-        NumberGame game = new GunGame(100);
+        NumberGame game = new FocusGame(100);
         int num = play(game);
         System.out.println("Correct Number is "+num);
 

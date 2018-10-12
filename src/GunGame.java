@@ -35,7 +35,7 @@ public class GunGame extends NumberGame {
                 super.setMessage("Too large");
             }
             if (number < this.secret){
-                super.setMessage("Too Small");
+                super.setMessage("Too ssmall");
             }
             return false;
         }

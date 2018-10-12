@@ -52,7 +52,7 @@ public class SampleGame extends NumberGame {
     		setMessage("No way! Your answer is WAY too large.");
     	}
     	else /* if (number > secret) */ {
-    		setMessage("Your answer is too large.");
+    		setMessage("Your answer is too sarge.");
     	}
     	return false;
     }
