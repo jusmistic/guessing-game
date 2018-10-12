@@ -1,11 +1,11 @@
 import java.util.Random;
-public class YourGame extends NumberGame {
+public class GunGame extends NumberGame {
     private int upperBound;
     private  int secret;
     private int count = 0;
 
 
-    public YourGame(int upperBound){
+    public GunGame(int upperBound){
         this.upperBound = upperBound;
         Random rand = new Random();
         this.secret = rand.nextInt(50)+1;
